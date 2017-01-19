@@ -5,11 +5,12 @@
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
-alias ls='ls --color=auto'
 PS1='[\u@\h \W]> '
 
-alias cls=clear
 
+alias fm=findmusik
+
+alias igrep='grep -i'
 
 alias psgrep='ps aux | grep'
 
@@ -83,6 +84,21 @@ function restartplasma {
 
 # ------------------------------------------------------------------------------
 function findmusik {
-  find /gahag/Musics/ -iregex ".*$*.*"
+  find /gahag/musics/ -iregex ".*$*.*"
 }
+# ------------------------------------------------------------------------------
+
+# ------------------------------------------------------------------------------
+readonly dccdir="/mnt/dcc"
+
+function dccsshfs {
+  if [ "$#" -ne 1 ]; then
+    echo "Missing user name."
+    return
+  fi
+  
+  sshfs $@@login.dcc.ufmg.br: $dccdir
+}
+
+alias dccumount='fusermount -u $dccdir'
 # ------------------------------------------------------------------------------
