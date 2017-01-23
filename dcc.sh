@@ -1,6 +1,6 @@
 readonly dccdir="/mnt/dcc"
 
-function dccsshfs {
+function dcc-sshfs {
   if [ "$#" -ne 1 ]; then
     echo "Missing user name."
     return
@@ -9,4 +9,4 @@ function dccsshfs {
   sshfs $@@login.dcc.ufmg.br: $dccdir
 }
 
-alias dccumount='fusermount -u $dccdir'
+alias dcc-umount='fusermount -u $dccdir'
