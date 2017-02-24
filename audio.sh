@@ -1,6 +1,6 @@
 alias fm=findmusik
 
-musicdir="/gahag/media/music/"
+musicdir="/gahag/media/musics/"
 
 function findmusik {
   find $musicdir -iregex ".*$*.*"
