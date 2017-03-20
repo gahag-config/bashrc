@@ -1,4 +1,4 @@
-alias cb-copy='xclip -selection c'
+alias clipboard='xclip -selection c'
 
 function tolower {
   echo "${@,,}"
