@@ -28,6 +28,7 @@ source $dir/audio.sh
 source $dir/dcc.sh
 source $dir/grep.sh
 source $dir/kde.sh
+source $dir/latex.sh
 source $dir/ps1.sh
 source $dir/system.sh
 source $dir/util.sh
