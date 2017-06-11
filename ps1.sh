@@ -5,9 +5,9 @@ __prompt_command() {
   
   local RCol='\[\e[0m\]'
   
-  local Red='\[\e[0;31m\]'
+  local Red='\[\e[0;91m\]'
   local Gre='\[\e[0;32m\]'
-  local BYel='\[\e[1;33m\]'
+  local Yel='\[\e[0;93m\]'
   local BBlu='\[\e[1;34m\]'
   local Pur='\[\e[0;35m\]'
   
@@ -17,5 +17,5 @@ __prompt_command() {
     PS1+="${Red}$EXIT "
   fi
 
-  PS1+="${BYel}\W${BBlu}]>${RCol} "
+  PS1+="${Yel}\W${BBlu}]>${RCol} "
 }
