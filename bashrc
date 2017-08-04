@@ -26,6 +26,7 @@ dir=$(scriptdir)
 
 source $dir/audio.sh
 source $dir/dcc.sh
+source $dir/github.sh
 source $dir/grep.sh
 source $dir/kde.sh
 source $dir/latex.sh
