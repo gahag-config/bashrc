@@ -22,17 +22,15 @@ function scriptdir {
 }
 
 
-dir=$(scriptdir)
+export BASHRC_DIR=$(scriptdir)
 
-source $dir/audio.sh
-source $dir/dcc.sh
-source $dir/github.sh
-source $dir/grep.sh
-source $dir/kde.sh
-source $dir/latex.sh
-source $dir/ps1.sh
-source $dir/system.sh
-source $dir/util.sh
-source $dir/youtube.sh
-
-unset dir scriptdir
+source $BASHRC_DIR/audio.sh
+source $BASHRC_DIR/dcc.sh
+source $BASHRC_DIR/github.sh
+source $BASHRC_DIR/grep.sh
+source $BASHRC_DIR/kde.sh
+source $BASHRC_DIR/latex.sh
+source $BASHRC_DIR/ps1.sh
+source $BASHRC_DIR/system.sh
+source $BASHRC_DIR/util.sh
+source $BASHRC_DIR/youtube.sh
