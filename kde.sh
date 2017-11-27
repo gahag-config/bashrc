@@ -1,4 +1,4 @@
 function restartplasma {
   killall plasmashell
-  kstart plasmashell
+  kstart5 plasmashell
 }
