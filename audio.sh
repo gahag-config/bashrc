@@ -14,3 +14,6 @@ function ffprobe-bitrate { # $@ : Input files
     echo $f $(ffprobe-music "$f" 2>&1 | grep "Hz,.*kb/s")
   done
 }
+
+alias musics-nfs-start='sudo systemctl start nfs-server.service'
+alias musics-nfs-stop='sudo systemctl stop nfs-server.service'
