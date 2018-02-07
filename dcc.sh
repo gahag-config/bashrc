@@ -1,12 +1,18 @@
 readonly dccdir="/mnt/dcc"
 
 function dcc-sshfs {
+  bashrc-require sshfs || return 1
+  
   if [ "$#" -ne 1 ]; then
     echo "Missing user name."
     return
   fi
   
-  sshfs $@@login.dcc.ufmg.br: $dccdir
+  sshfs "$@"@login.dcc.ufmg.br: $dccdir
 }
 
-alias dcc-umount='fusermount -u $dccdir'
+function dcc-umount {
+  bashrc-require fuse2 || return 1
+  
+  fusermount -u $dccdir
+}

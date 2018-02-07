@@ -1,3 +1,11 @@
-alias youtube-dlm='youtube-dl --format bestaudio --extract-audio --audio-format mp3 --audio-quality 320k'
+function youtube-dlm {
+  bashrc-require youtube-dl || return 1
+  
+  youtube-dl --format bestaudio --extract-audio --audio-format mp3 --audio-quality 320k "$@"
+}
 
-alias youtube-dlv='youtube-dl -f 22 '
+function youtube-dlv {
+  bashrc-require youtube-dl || return 1
+  
+  youtube-dl -f 22 "$@"
+}

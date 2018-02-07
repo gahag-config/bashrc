@@ -24,8 +24,10 @@ function scriptdir {
 
 export BASHRC_DIR=$(scriptdir)
 
+source $BASHRC_DIR/require.sh
 source $BASHRC_DIR/audio.sh
 source $BASHRC_DIR/dcc.sh
+source $BASHRC_DIR/drive.sh
 source $BASHRC_DIR/github.sh
 source $BASHRC_DIR/grep.sh
 source $BASHRC_DIR/kde.sh
