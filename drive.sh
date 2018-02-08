@@ -2,12 +2,14 @@ function drive-pull {
   bashrc-require rclone || return 1
   
   for file in "$@"; do
-    rclone sync drive:/$file ./
+    rclone --skip-links copy drive:/"$file" ./
   done
 }
 
 function drive-push {
   bashrc-require rclone || return 1
   
-  rclone sync "$@" drive:/
+  for file in "$@"; do
+    rclone --skip-links copy "$file" drive:/
+  done
 }
