@@ -11,3 +11,7 @@ function tolower {
 function toupper {
   echo "${@^^}"
 }
+
+function pick {
+  sed -n "$@ p"
+}
