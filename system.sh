@@ -11,6 +11,18 @@ alias sys-update='sudo pacman -Syu'
 alias open='xdg-open'
 
 
+# man colors
+man() {
+  LESS_TERMCAP_md=$'\e[01;34m'    \
+  LESS_TERMCAP_me=$'\e[0m'        \
+  LESS_TERMCAP_se=$'\e[0m'        \
+  LESS_TERMCAP_so=$'\e[01;44;37m' \
+  LESS_TERMCAP_ue=$'\e[0m'        \
+  LESS_TERMCAP_us=$'\e[01;32m'    \
+  command man "$@"
+}
+
+
 # function partbkp { # $1 : Partition ID (sdXY) ; $2 : Output file
 #   sudo dd if="/dev/$1" conv=sync,noerror bs=64K "of=$2"
 # }
