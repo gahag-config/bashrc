@@ -6,6 +6,8 @@
 [[ $- != *i* ]] && return
 
 
+export PATH="${PATH}:${HOME}/.local/bin"
+
 function scriptdir {
   local bash_src="${BASH_SOURCE[0]}"
   
