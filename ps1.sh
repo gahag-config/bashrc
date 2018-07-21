@@ -3,7 +3,7 @@ PROMPT_COMMAND=__prompt_command # Func to gen PS1 after CMDs
 __prompt_command() {
   local EXIT="$?" # This needs to be first
   
-  local RCol='\[\e[0m\]'
+  local Reset='\[\e[0m\]'
   
   local Red='\[\e[0;91m\]'
   local Gre='\[\e[0;32m\]'
@@ -11,11 +11,36 @@ __prompt_command() {
   local BBlu='\[\e[1;34m\]'
   local Pur='\[\e[0;35m\]'
   
-  PS1="${BBlu}[${RCol}\u "
+  local Corner1='\342\224\214'
+	local Corner2='\342\224\224'
+	local Dash='\342\224\200'
+	local Bar='\342\224\202'
+  
+  if [ -n "$PROMPT_INIT" ]; then
+    PS1="\n"
+  else
+    PS1=""
+    PROMPT_INIT=yes
+  fi
+  
+  PS1+="${Corner1}${BBlu}[${Reset}"
   
   if [ $EXIT != 0 ]; then
-    PS1+="${Red}$EXIT "
+    PS1+="${Red}"
+  else
+    PS1+="${Gre}"
   fi
-
-  PS1+="${Yel}\W${BBlu}]>${RCol} "
+  
+  PS1+="$EXIT${BBlu}]${Reset}${Dash}"
+  
+  if [ $EXIT -lt 10 ]; then
+    PS1+="${Dash}"
+  fi
+  
+  if [ $EXIT -lt 100 ]; then
+    PS1+="${Dash}"
+  fi
+  
+  
+  PS1+="${BBlu}[${Reset}\u@\h${BBlu}]${Reset}${Dash}${Dash}${Dash}${BBlu}[${Yel}\w${BBlu}]\n${Reset}${Corner2}${Dash}${BBlu}λ${Reset} "
 }
