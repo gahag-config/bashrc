@@ -30,7 +30,11 @@ man() {
 function gahag-backup {
   # add --delete flag to delete extraneous files from the
   # receiving side (ones that aren’t on the sending side).
-  rsync -av /gahag "/run/media/gahag/gahag - portable/backup/" 2>&1 \
+  rsync -av --delete --delete-excluded                                \
+        --exclude='.git/'                                             \
+        --exclude='gahag/media/cinematography'                        \
+        --exclude='gahag/programming/projects/ic/DetuxUbuntu-1.0.ova' \
+        /gahag "/run/media/gahag/gahag - portable/backup/" 2>&1       \
   | tee $(date '+%Y-%m-%d(%H:%M:%S)-rsync.log')
 }
 
