@@ -1,4 +1,14 @@
-PROMPT_COMMAND=__prompt_command # Func to gen PS1 after CMDs
+case "$TERM" in
+  "tramp") # emacs tramp compatibility
+    PS1="> "
+    ;;
+  xterm*|rxvt*|eterm*|screen*)
+    PROMPT_COMMAND=__prompt_command # Func to gen PS1 after CMDs
+    ;;
+  *)
+    PS1="> "
+    ;;
+esac
 
 __prompt_command() {
   local EXIT="$?" # This needs to be first
