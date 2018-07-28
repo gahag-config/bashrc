@@ -2,11 +2,8 @@ case "$TERM" in
   "tramp") # emacs tramp compatibility
     PS1="> "
     ;;
-  xterm*|rxvt*|eterm*|screen*)
-    PROMPT_COMMAND=__prompt_command # Func to gen PS1 after CMDs
-    ;;
   *)
-    PS1="> "
+    PROMPT_COMMAND=__prompt_command # Func to gen PS1 after CMDs
     ;;
 esac
 
