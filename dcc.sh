@@ -1,6 +1,7 @@
 readonly dccdir="/mnt/dcc"
 
-function dcc-sshfs {
+
+function dcc-mount {
   bashrc-require sshfs || return 1
   
   if [ "$#" -ne 1 ]; then
@@ -10,6 +11,7 @@ function dcc-sshfs {
   
   sshfs "$@"@login.dcc.ufmg.br: $dccdir
 }
+
 
 function dcc-umount {
   bashrc-require fuse2 || return 1

@@ -20,12 +20,14 @@ function github-mkrepo {
   return $result
 }
 
+
 function github-add-origin {  # $1: repo name
   bashrc-require git || return 1
   
   git remote add origin https://github.com/gahag/$1.git
   git push -u origin master
 }
+
 
 function github-mkorigin {
   bashrc-require nano || return 1

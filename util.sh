@@ -1,8 +1,4 @@
-function clipboard {
-  bashrc-require xclip || return 1
-  
-  xclip -selection c "$@"
-}
+alias open='xdg-open'
 
 function tolower {
   echo "${@,,}"
