@@ -28,6 +28,7 @@ source $BASHRC_DIR/require.sh
 source $BASHRC_DIR/backup.sh
 source $BASHRC_DIR/path.sh
 source $BASHRC_DIR/bat.sh
+source $BASHRC_DIR/exa.sh
 source $BASHRC_DIR/dcc.sh
 source $BASHRC_DIR/drive.sh
 source $BASHRC_DIR/github.sh
