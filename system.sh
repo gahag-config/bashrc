@@ -9,3 +9,6 @@ alias mkdir='mkdir -p'
 alias sys-update='sudo pacman -Syu'
 
 alias psgrep='ps aux | grep'
+
+
+export EDITOR="emacs -nw --no-desktop"
