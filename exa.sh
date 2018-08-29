@@ -1,3 +1,3 @@
-export EXA_COLORS="ur=30:uw=30:ux=1;33:ue=1;33:gr=30:gw=30:gx=1;33:tr=30:tw=30:tx=1;33:su=34:sf=34:xa=34:sn=30:sb=30:da=30:uu=30:un=1;30:gu=30:gn=1;30"
+export EXA_COLORS="ur=38;5;nnn:uw=38;5;nnn:ux=1;33:ue=1;33:gr=38;5;nnn:gw=38;5;nnn:gx=1;33:tr=38;5;nnn:tw=38;5;nnn:tx=1;33:su=34:sf=34:xa=34:sn=38;5;nnn:sb=38;5;nnn:da=38;5;nnn:uu=38;5;nnn:un=1;38;5;nnn:gu=38;5;nnn:gn=1;38;5;nnn"
 
 alias lx="exa -l --group-directories-first --time-style long-iso"
