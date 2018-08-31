@@ -12,3 +12,4 @@ alias psgrep='ps aux | grep'
 
 
 export EDITOR="emacs -nw --no-desktop"
+alias ed="$EDITOR"
