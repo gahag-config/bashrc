@@ -1,5 +1,8 @@
 alias open='xdg-open'
 
+alias lsblk='lsblk --fs'
+
+
 function tolower {
   echo "${@,,}"
 }
