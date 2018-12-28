@@ -22,6 +22,9 @@ function scriptdir {
 }
 
 
+[[ -f ~/.profile ]] && . ~/.profile # load environment variables
+
+
 export BASHRC_DIR=$(scriptdir)
 
 source $BASHRC_DIR/require.sh

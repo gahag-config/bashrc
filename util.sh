@@ -12,5 +12,5 @@ function toupper {
 }
 
 function pick {
-  sed -n "$@ p"
+  sed "$1q;d" ${@:2}
 }
