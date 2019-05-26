@@ -1,4 +1,4 @@
-alias ls='ls --color=auto -lh --time-style long-iso'
+alias ls='ls --color=auto -lh --time-style long-iso --group-directories-first'
 
 alias rm="rm -I"
 alias mv="mv -i"
