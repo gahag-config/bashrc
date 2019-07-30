@@ -1,4 +1,5 @@
 alias fm=musics-find
+alias sdl='slizzy dl'
 
 musicdir="/gahag/media/musics/"
 
