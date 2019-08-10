@@ -8,7 +8,12 @@ function gahag-backup {
   # receiving side (ones that aren’t on the sending side).
   rsync -av --delete --delete-excluded                                \
         --exclude='.git/'                                             \
+        --exclude='.svn/'                                             \
+        --exclude='.stack-work/'                                      \
+        --exclude='bin/'                                              \
+        --exclude='obj/'                                              \
         --exclude='gahag/media/cinematography'                        \
+        --exclude='gahag/torrents'                                    \
         --exclude='gahag/programming/projects/ic/DetuxUbuntu-1.0.ova' \
         /gahag "/run/media/gahag/gahag - portable/backup/" 2>&1       \
   | tee $(date '+%Y-%m-%d(%H:%M:%S)-rsync.log')
