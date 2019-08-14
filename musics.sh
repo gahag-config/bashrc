@@ -35,3 +35,32 @@ function musics-nfs-stop {
   
   sudo systemctl stop nfs-server.service
 }
+
+
+extensions=(
+  -name '*.mp3' -o
+  -name '*.flac' -o
+  -name '*.wav' -o
+  -name '*.aif' -o
+  -name '*.aiff' -o
+  -name '*.m4a'
+)
+
+function list-musics {
+  find $musicdir -type f -print0 \( "${extensions[@]}" \)
+}
+
+function musics-stats {
+  printf "Audio files: "
+  list-musics | tr -cd '\0' | wc -c
+
+  printf "Playback time: "
+  duration_milis="$(
+    list-musics \
+      | xargs --null -- mediainfo --Output='Audio;%Duration%\n' \
+      | awk NF \
+      | paste -s -d + \
+      | bc
+  )"
+  echo "$duration_milis / 1000" | bc
+}
