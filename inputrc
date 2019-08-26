@@ -1,0 +1,4 @@
+set revert-all-at-newline on
+
+Control-o: "> output.txt"
+Control-x: "\C-a$(\C-e)"

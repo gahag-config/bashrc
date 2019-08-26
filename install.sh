@@ -9,3 +9,11 @@ if [ -z "$HISTFILE" ]; then
 else
   mkdir -p "$(dirname $HISTFILE)"
 fi
+
+
+if [ -z "$INPUTRC" ]; then
+    echo "INPUTRC not defined, skipping...";
+else
+  mkdir -p "$(dirname $INPUTRC)"
+  ln -s "$(pwd)/inputrc" "$INPUTRC"
+fi
