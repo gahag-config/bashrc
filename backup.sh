@@ -10,13 +10,14 @@ function gahag-replica {
         --exclude='.git/'                                             \
         --exclude='.svn/'                                             \
         --exclude='.stack-work/'                                      \
+        --exclude='.ccls-cache/'                                      \
         --exclude='bin/'                                              \
         --exclude='obj/'                                              \
         --exclude='gahag/media/cinematography'                        \
         --exclude='gahag/torrents'                                    \
         --exclude='gahag/programming/projects/ic/DetuxUbuntu-1.0.ova' \
         /gahag "/run/media/gahag/gahag - portable/backup/" 2>&1       \
-  | tee $(date '+%Y-%m-%d(%H:%M:%S)-rsync.log')
+  | tee $(date '+%Y-%m-%dT%H.%M.%S-rsync.log')
 }
 
 function gahag-backup {
@@ -24,11 +25,12 @@ function gahag-backup {
       --exclude='*/.git'                                                 \
       --exclude='*/.svn'                                                 \
       --exclude='*/.stack-work'                                          \
+      --exclude='*/.ccls-cache'                                          \
       --exclude='*/bin'                                                  \
       --exclude='*/obj'                                                  \
       --exclude='media/cinematography'                                   \
       /gahag 2>&1                                                        \
-    | tee $(date '+%Y-%m-%d(%H:%M:%S)-tar.log')
+    | tee $(date '+%Y-%m-%dT%H.%M.%S-rsync.log')
 }
 
 function gahag-backup-restore {
