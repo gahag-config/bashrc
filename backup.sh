@@ -15,7 +15,6 @@ function gahag-replica {
         --exclude='obj/'                                              \
         --exclude='gahag/media/cinematography'                        \
         --exclude='gahag/torrents'                                    \
-        --exclude='gahag/programming/projects/ic/DetuxUbuntu-1.0.ova' \
         /gahag "/run/media/gahag/gahag - portable/backup/" 2>&1       \
   | tee $(date '+%Y-%m-%dT%H.%M.%S-rsync.log')
 }
