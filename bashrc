@@ -29,17 +29,18 @@ export BASHRC_DIR=$(scriptdir)
 
 source $BASHRC_DIR/require.sh
 source $BASHRC_DIR/backup.sh
-source $BASHRC_DIR/path.sh
 source $BASHRC_DIR/bat.sh
-source $BASHRC_DIR/exa.sh
 source $BASHRC_DIR/dcc.sh
+source $BASHRC_DIR/diff.sh
 source $BASHRC_DIR/drive.sh
+source $BASHRC_DIR/exa.sh
 source $BASHRC_DIR/github.sh
 source $BASHRC_DIR/grep.sh
 source $BASHRC_DIR/latex.sh
 source $BASHRC_DIR/man.sh
 source $BASHRC_DIR/musics.sh
 source $BASHRC_DIR/pacman.sh
+source $BASHRC_DIR/path.sh
 source $BASHRC_DIR/plasma.sh
 source $BASHRC_DIR/ps1.sh
 source $BASHRC_DIR/system.sh
