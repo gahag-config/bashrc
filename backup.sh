@@ -11,11 +11,12 @@ function gahag-replica {
         --exclude='.svn/'                                             \
         --exclude='.stack-work/'                                      \
         --exclude='.ccls-cache/'                                      \
+        --exclude='target/'                                           \
         --exclude='bin/'                                              \
         --exclude='obj/'                                              \
         --exclude='gahag/media/cinematography'                        \
         --exclude='gahag/torrents'                                    \
-        /gahag "/run/media/gahag/gahag - portable/backup/" 2>&1       \
+        /gahag "/run/media/gahag/59296a1c-5568-49e2-bb7e-180383ae9432/" 2>&1       \
   | tee $(date '+%Y-%m-%dT%H.%M.%S-rsync.log')
 }
 
@@ -25,9 +26,11 @@ function gahag-backup {
       --exclude='*/.svn'                                                 \
       --exclude='*/.stack-work'                                          \
       --exclude='*/.ccls-cache'                                          \
+      --exclude='*/target'                                               \
       --exclude='*/bin'                                                  \
       --exclude='*/obj'                                                  \
       --exclude='media/cinematography'                                   \
+      --exclude='/torrents'                                              \
       /gahag 2>&1                                                        \
     | tee $(date '+%Y-%m-%dT%H.%M.%S-rsync.log')
 }
