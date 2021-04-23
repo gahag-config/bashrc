@@ -12,6 +12,7 @@ function gahag-replica {
         --exclude='.stack-work/'                                      \
         --exclude='.ccls-cache/'                                      \
         --exclude='target/'                                           \
+        --exclude='virtualenv/'                                       \
         --exclude='bin/'                                              \
         --exclude='obj/'                                              \
         --exclude='gahag/media/cinematography'                        \
@@ -27,6 +28,7 @@ function gahag-backup {
       --exclude='*/.stack-work'                                          \
       --exclude='*/.ccls-cache'                                          \
       --exclude='*/target'                                               \
+      --exclude='*/virtualenv'                                           \
       --exclude='*/bin'                                                  \
       --exclude='*/obj'                                                  \
       --exclude='media/cinematography'                                   \
