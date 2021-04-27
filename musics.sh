@@ -4,7 +4,22 @@ alias sdl='rslizzy'
 musicdir="/gahag/media/musics/"
 
 function musics-find {
+	echo 'Disk:'
 	find $musicdir -iregex ".*$*.*"
+
+	echo
+
+	echo 'Todo:'
+	green="$(tput setaf 2)"
+	gray="$(tput setaf 250)"
+	reset="$(tput sgr0)"
+	grep -i "$*" /gahag/org/musics.org \
+		| sed 's/^\*\+ //' \
+		| sed 's/^ \+- //' \
+		| sed 's/ =[0-9]\{1,2\}:[0-9]\{2\}=$//' \
+		| sed 's/^\(UNR\|DOWNLOAD\|RETRY\|AGAIN\)/'"$green"'\1'"$reset"'/' \
+		| sed 's/^\(DONE.*\)$/'"$gray"'\1'"$reset"'/'
+		# Remove heading asteriscs, list prefix and time tag. Also highlight TODO keywords.
 }
 
 
