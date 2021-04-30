@@ -61,17 +61,17 @@ extensions=(
 	-name '*.m4a'
 )
 
-function list-musics {
-	find $musicdir -type f -print0 \( "${extensions[@]}" \)
+function musics-list {
+	find $musicdir -type f \( "${extensions[@]}" \) -print0
 }
 
 function musics-stats {
 	printf "Audio files: "
-	list-musics | tr -cd '\0' | wc -c
+	musics-list | tr -cd '\0' | wc -c
 
 	printf "Playback time: "
 	duration_milis="$(
-		list-musics \
+		musics-list \
 			| xargs --null -- mediainfo --Output='Audio;%Duration%\n' \
 			| awk NF \
 			| paste -s -d + \
