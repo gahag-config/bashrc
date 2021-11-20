@@ -38,6 +38,13 @@ function musics-ffprobe-bitrate { # $@ : Input files
 }
 
 
+# Usage:
+# musics-mount <ip> <directory>
+function musics-mount {
+	sudo mount -t nfs -o vers=4 $1:/ $2
+}
+
+
 function musics-nfs-start {
 	bashrc-require nfs-utils || return 1
 
