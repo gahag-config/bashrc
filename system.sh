@@ -7,6 +7,7 @@ alias ln="ln -i"
 alias mkdir='mkdir -p'
 
 alias sys-update='sudo pacman -Syu'
+alias pacman-clean-cache='paccache -rk1'
 
 alias psgrep='ps aux | grep'
 
