@@ -85,3 +85,5 @@ function musics-stats {
 	)"
 	echo "$duration_milis / 1000" | bc
 }
+
+alias bpm='bpm-tag -nf'
