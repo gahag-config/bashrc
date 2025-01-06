@@ -56,12 +56,12 @@ __prompt_command() {
 
   # extensions
   for key in "${!PS1_EXTS[@]}"; do  # [workdir]
-    PS1+="${Dash}${Dash}${Dash}${BBlu}[${Pur}$key:${PS1_EXTS[$key]}${BBlu}]"
+    PS1+="${Dash}${Dash}${Dash}${BBlu}[${Pur}$key:${PS1_EXTS[$key]}${BBlu}]${Reset}"
   done
 
   # [workdir]
-  PS1+="${Dash}${Dash}${Dash}${BBlu}[${Yel}\w${BBlu}]"
+  PS1+="${Dash}${Dash}${Dash}${BBlu}[${Yel}\w${BBlu}]${Reset}"
 
   # prompt
-  PS1+="\n${Reset}${Corner2}${Dash}${BBlu}λ${Reset} "
+  PS1+="\n${Corner2}${Dash}${BBlu}λ${Reset} "
 }
