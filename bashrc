@@ -47,3 +47,4 @@ source $BASHRC_DIR/system.sh
 source $BASHRC_DIR/util.sh
 source $BASHRC_DIR/x11.sh
 source $BASHRC_DIR/youtube.sh
+source $BASHRC_DIR/cargo.sh
