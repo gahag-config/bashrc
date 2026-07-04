@@ -3,3 +3,5 @@ function x11-clip {
   
   xclip -selection c "$@"
 }
+
+alias plasma=startplasma-wayland
