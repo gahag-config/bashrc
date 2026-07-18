@@ -18,6 +18,7 @@ function gahag-replica {
         --exclude='gahag/media/cinematography'                        \
         --exclude='gahag/torrents'                                    \
         --exclude='gahag/games/r36s.iso'                              \
+        --exclude='gahag/oss/installers/**/*.iso'                     \
         /gahag "/run/media/gahag/59296a1c-5568-49e2-bb7e-180383ae9432/" 2>&1       \
   | tee $(date '+%Y-%m-%dT%H.%M.%S-rsync.log')
 }
